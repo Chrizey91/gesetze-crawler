@@ -1,0 +1,39 @@
+[project]
+name = "gesetze_crawler"
+version = "0.1.7"
+description = "A Python CLI to download and check german law texts"
+authors = [
+    {name = "Christopher Juerges", email = "46691625+Chrizey91@users.noreply.github.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "beautifulsoup4>=4.12.3",
+    "click>=8.1.8",
+    "lxml>=5.3.0",
+    "requests>=2.32.3",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.4",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[project.urls]
+Homepage = "https://github.com/Chrizey91/gesetze-crawler"
+Issues = "https://github.com/Chrizey91/gesetze-crawler/issues"
